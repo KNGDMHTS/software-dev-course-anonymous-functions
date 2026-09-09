@@ -73,7 +73,7 @@ const todos = [
 let filteredTodos = todos.filter((taskList) => taskList.completed == false);
 let sortedPriority = todos.sort((a, b) => a.priority - b.priority);
 let sortIncomplete = todos.filter((taskList) => taskList.completed == false).sort((a, b) => a.priority - b.priority);
-let completedTasks = todos.map((taskList) => taskList.completed = true);
+let completedTasks = todos.map((taskList) => ({...taskList, completed: true}));
   
 console.log("Incomplete Tasks:", filteredTodos);
 console.log("Sorted by Priority:", sortedPriority);
